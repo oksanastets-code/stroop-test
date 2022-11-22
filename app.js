@@ -40,8 +40,6 @@ function random() {
     return Math.round(Math.random() * 256);
 }
 
-const dimension = 30;
-
 function createBoxes(amount) {
     const boxes = [];
 
