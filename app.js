@@ -9,9 +9,7 @@ const colors = [
     '#5B0099', //violet
     '#FC0FC0', //pink
 ];
-console.log(colors);
 const text = ['Чорний', 'Червоний', 'Помаранчевий', 'Жовтий', 'Зелений', 'Голубий', 'Синій', 'Фіолетовий', 'Рожевий',]
-console.log(text);
 
 const controlPanel = document.querySelector('#controls');
 const inputValueEl = document.querySelector('#controls input');
@@ -33,11 +31,6 @@ destroyBtn.addEventListener('click', onDestroyBtnClick);
 function onDestroyBtnClick() {
     inputValueEl.value = '';
     boxesContainer.innerHTML = '';
-    console.log(boxesContainer);
-}
-
-function random() {
-    return Math.round(Math.random() * 256);
 }
 
 function createBoxes(amount) {
@@ -50,8 +43,6 @@ function createBoxes(amount) {
         box.style.marginRight = '10px';
         box.style.marginTop = '10px';
         box.style.outline = '1px solid black';
-        // box.style.backgroundColor = `rgb(${random()}, ${random()}, ${random()})`;
-        // box.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
         const colorText = document.createElement('p');
         colorText.textContent = text[Math.floor(Math.random()*text.length)];
         colorText.style.color = colors[Math.floor(Math.random() * colors.length)];
@@ -63,5 +54,4 @@ function createBoxes(amount) {
     boxesContainer.append(...boxes);
     boxesContainer.style.display = 'flex';
     boxesContainer.style.flexWrap = 'wrap';
-    console.log(boxesContainer);
 }
